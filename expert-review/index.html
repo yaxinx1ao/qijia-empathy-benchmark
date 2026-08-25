@@ -274,7 +274,7 @@ function render(messages) {
 
   dialog.innerHTML = "";
 
-  messages.forEach(msg => {
+  messages.forEach((msg, index) => {
 
     const wrapper =
       document.createElement("div");
@@ -287,7 +287,7 @@ function render(messages) {
 
     wrapper.innerHTML = `
       <div class="speaker">
-        ${msg.speaker}
+        #${index + 1}　${msg.speaker}
       </div>
 
       <div class="bubble">
